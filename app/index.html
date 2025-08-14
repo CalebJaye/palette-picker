@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Palette Picker</h1>
+  <div id="app"></div>
+  <form id="first-form">
+    <div class="creator">
+      <h2>Add a Palette</h2>
+      
+      <label for="palette-input">Palette Name:</label>
+      <input type="text" id="palette-input" name="paletteName" required />
+
+      <label for="first-color">Color #1</label>
+      <input type="color" id="first-color" name="firstPaletteColor" required />
+
+      <label for="second-color">Color #2</label>
+      <input type="color" id="second-color" name="secondPaletteColor" required />
+
+      <label for="third-color">Color #3</label>
+      <input type="color" id="third-color" name="thirdPaletteColor" required />
+
+      <fieldset>
+        <legend>Temperature</legend>
+        <input name="temperature" type="radio" value="warm" id="warm" />
+        <label for="warm">Warm</label>
+        
+        <input name="temperature" type="radio" value="neutral" id="neutral" checked/>
+        <label for="neutral">Neutral</label>
+        
+        <input name="temperature" type="radio" value="cool" id="cool"/>
+        <label for="cool">Cool</label>
+      </fieldset>
+
+      <button type="submit">Create Palette</button>
+    </div>
+  </form>
+
+  <section id="palettes" aria-labelledby="created-palettes">
+    <h2 id="created-palettes">Palettes</h2>
+    <ul id="palettes-list"></ul>
+  </section>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
